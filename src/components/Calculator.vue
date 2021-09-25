@@ -6,6 +6,10 @@
   function clearExpression() {
     expression.value = '';
   }
+
+  function removeLastChar() {
+    expression.value = Array.from(expression.value).slice(0, -1).join('');
+  }
 </script>
 
 <template>
@@ -33,7 +37,7 @@
           <button class="button">/</button>
         </div>
         <div class="button-column">
-          <button class="button del">DEL</button>
+          <button class="button del" @click="removeLastChar">DEL</button>
           <button class="button">+</button>
           <button class="button">-</button>
           <button class="button">x</button>
