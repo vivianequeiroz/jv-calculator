@@ -6,7 +6,7 @@
 
 <template>
   <main class="container">
-    <h1>JV Calculadora</h1>
+    <h1>JV Calculator</h1>
     <Calculator />
   </main>
 </template>
@@ -40,20 +40,30 @@
     font-size: 62.5%;
   }
 
+  @media (max-width: 1080px) {
+    html {
+      font-size: 93.75%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
+
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   #app,
   .container {
+    font-family: Spartan, Roboto, Arial, sans-serif;
+    font-weight: 700;
     max-width: 1440px;
     height: 100vh;
     background: var(--background);
-  }
-
-  .container {
     margin: 0 auto;
   }
 </style>
