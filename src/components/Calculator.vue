@@ -41,6 +41,9 @@
 </template>
 
 <style scoped>
+  .calculator-container {
+    width: 700px;
+  }
   a {
     color: #42b983;
   }
