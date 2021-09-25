@@ -1,12 +1,17 @@
 <script setup lang="ts">
-  //import { ref } from 'vue';
+  import { ref } from 'vue';
 
-  //const count = ref<number>(10);
+  const expression = ref<string>('');
+
+  function clearExpression() {
+    expression.value = '';
+  }
 </script>
 
 <template>
-  <form class="calculator-container">
-    <input class="input-numbers" value="399,981" />
+  <pre style="color: #fff">{{ expression }}</pre>
+  <form class="calculator-container" @submit.prevent="">
+    <input v-model="expression" class="input-numbers" />
     <div class="buttons">
       <div class="buttons-operators">
         <div class="button-column">
@@ -35,7 +40,7 @@
         </div>
       </div>
       <div class="button-controllers">
-        <button class="reset">RESET</button>
+        <button class="reset" @click="clearExpression">RESET</button>
         <button type="submit" class="result">=</button>
       </div>
     </div>
