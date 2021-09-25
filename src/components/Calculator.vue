@@ -5,39 +5,39 @@
 </script>
 
 <template>
-  <div class="calculator-container">
-    <div class="input-numbers">399,981</div>
+  <form class="calculator-container">
+    <input class="input-numbers" value="399,981" />
     <div class="buttons-operators">
       <div class="button-column">
-        <div>7</div>
-        <div>4</div>
-        <div>1</div>
-        <div>,</div>
+        <button>7</button>
+        <button>4</button>
+        <button>1</button>
+        <button>,</button>
       </div>
       <div class="button-column">
-        <div>8</div>
-        <div>5</div>
-        <div>2</div>
-        <div>0</div>
+        <button>8</button>
+        <button>5</button>
+        <button>2</button>
+        <button>0</button>
       </div>
       <div class="button-column">
-        <div>9</div>
-        <div>6</div>
-        <div>3</div>
-        <div>/</div>
+        <button>9</button>
+        <button>6</button>
+        <button>3</button>
+        <button>/</button>
       </div>
       <div class="button-column">
-        <div>DEL</div>
-        <div>+</div>
-        <div>-</div>
-        <div>x</div>
+        <button>DEL</button>
+        <button>+</button>
+        <button>-</button>
+        <button>x</button>
       </div>
     </div>
     <div class="buttons-controllers">
-      <div class="reset">RESET</div>
-      <div class="result">=</div>
+      <button class="reset">RESET</button>
+      <button type="submit" class="result">=</button>
     </div>
-  </div>
+  </form>
 </template>
 
 <style scoped>
