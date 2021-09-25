@@ -50,10 +50,11 @@
     flex-direction: column;
   }
 
-  .input-numbers, .buttons {
+  .input-numbers,
+  .buttons {
     flex: 1;
     background: var(--shape);
-    border-radius: .25rem;
+    border-radius: 0.25rem;
   }
 
   .input-numbers {
@@ -77,7 +78,7 @@
     width: 100%;
     margin-top: 1rem;
     padding: 1.25rem;
-    grid-gap: .7rem;
+    grid-gap: 0.7rem;
 
     font-size: 1.8rem;
   }
@@ -86,6 +87,7 @@
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    width: 100%;
   }
 
   .buttons-operators,
@@ -95,7 +97,6 @@
   }
 
   .button {
-    width: 5rem;
     height: 3rem;
 
     font-size: 1.2rem;
@@ -104,7 +105,7 @@
 
     background: var(--button-background);
     border: 0;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border-bottom: 0.3rem solid var(--action-button-background);
   }
 
@@ -125,7 +126,7 @@
     font-weight: bold;
 
     border: 0;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   .reset,
