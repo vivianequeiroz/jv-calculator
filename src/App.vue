@@ -5,17 +5,55 @@
 </script>
 
 <template>
-  <h1>JV Calculadora</h1>
-  <Calculator/>
+  <main class="container">
+    <h1>JV Calculadora</h1>
+    <Calculator />
+  </main>
 </template>
 
 <style>
+  :root {
+    --background: hsl(268, 75%, 9%);
+    --shape: hsl(268, 71%, 12%);
+
+    --primary: hsl(52, 100%, 62%);
+    --secondary: hsl(198, 20%, 13%);
+    --tertiary: hsl(0, 0, 100%);
+
+    --button-background: hsl(268, 47%, 21%);
+    --button-shadow: hsl(290, 70%, 36%);
+
+    --action-button-background: hsl(281, 89%, 26%);
+    --action-button-shadow: hsl(285, 91%, 52%);
+
+    --submit-button: hsl(176, 100%, 44%);
+    --soft-submit-button: hsl(177, 92%, 70%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+  }
+
+  #app,
+  .container {
+    max-width: 1440px;
+    height: 100vh;
+    background: var(--background);
+  }
+
+  .container {
+    margin: 0 auto;
   }
 </style>
