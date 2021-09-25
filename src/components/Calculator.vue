@@ -10,6 +10,10 @@
   function removeLastChar() {
     expression.value = Array.from(expression.value).slice(0, -1).join('');
   }
+
+  function addExpressionValue(buttonValue: string) {
+    expression.value += buttonValue;
+  }
 </script>
 
 <template>
@@ -19,28 +23,28 @@
     <div class="buttons">
       <div class="buttons-operators">
         <div class="button-column">
-          <button class="button">7</button>
-          <button class="button">4</button>
-          <button class="button">1</button>
-          <button class="button">,</button>
+          <button class="button" @click='addExpressionValue("7")'>7</button>
+          <button class="button" @click='addExpressionValue("4")'>4</button>
+          <button class="button" @click='addExpressionValue("1")'>1</button>
+          <button class="button" @click='addExpressionValue(",")'>,</button>
         </div>
         <div class="button-column">
-          <button class="button">8</button>
-          <button class="button">5</button>
-          <button class="button">2</button>
-          <button class="button">0</button>
+          <button class="button" @click='addExpressionValue("8")'>8</button>
+          <button class="button" @click='addExpressionValue("5")'>5</button>
+          <button class="button" @click='addExpressionValue("2")'>2</button>
+          <button class="button" @click='addExpressionValue("0")'>0</button>
         </div>
         <div class="button-column">
-          <button class="button">9</button>
-          <button class="button">6</button>
-          <button class="button">3</button>
-          <button class="button">/</button>
+          <button class="button" @click='addExpressionValue("9")'>9</button>
+          <button class="button" @click='addExpressionValue("6")'>6</button>
+          <button class="button" @click='addExpressionValue("3")'>3</button>
+          <button class="button" @click='addExpressionValue("/")'>/</button>
         </div>
         <div class="button-column">
           <button class="button del" @click="removeLastChar">DEL</button>
-          <button class="button">+</button>
-          <button class="button">-</button>
-          <button class="button">x</button>
+          <button class="button" @click='addExpressionValue("+")'>+</button>
+          <button class="button" @click='addExpressionValue("-")'>-</button>
+          <button class="button" @click='addExpressionValue("x")'>x</button>
         </div>
       </div>
       <div class="button-controllers">
