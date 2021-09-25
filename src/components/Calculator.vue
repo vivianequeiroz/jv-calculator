@@ -8,36 +8,36 @@
   <form class="calculator-container">
     <input class="input-numbers" value="399,981" />
     <div class="buttons">
-    <div class="buttons-operators">
-      <div class="button-column">
-        <button class="button">7</button>
-        <button class="button">4</button>
-        <button class="button">1</button>
-        <button class="button">,</button>
+      <div class="buttons-operators">
+        <div class="button-column">
+          <button class="button">7</button>
+          <button class="button">4</button>
+          <button class="button">1</button>
+          <button class="button">,</button>
+        </div>
+        <div class="button-column">
+          <button class="button">8</button>
+          <button class="button">5</button>
+          <button class="button">2</button>
+          <button class="button">0</button>
+        </div>
+        <div class="button-column">
+          <button class="button">9</button>
+          <button class="button">6</button>
+          <button class="button">3</button>
+          <button class="button">/</button>
+        </div>
+        <div class="button-column">
+          <button class="button del">DEL</button>
+          <button class="button">+</button>
+          <button class="button">-</button>
+          <button class="button">x</button>
+        </div>
       </div>
-      <div class="button-column">
-        <button class="button">8</button>
-        <button class="button">5</button>
-        <button class="button">2</button>
-        <button class="button">0</button>
+      <div class="button-controllers">
+        <button class="reset">RESET</button>
+        <button type="submit" class="result">=</button>
       </div>
-      <div class="button-column">
-        <button class="button">9</button>
-        <button class="button">6</button>
-        <button class="button">3</button>
-        <button class="button">/</button>
-      </div>
-      <div class="button-column">
-        <button class="button del">DEL</button>
-        <button class="button">+</button>
-        <button class="button">-</button>
-        <button class="button">x</button>
-      </div>
-    </div>
-    <div class="button-controllers">
-      <button class="reset">RESET</button>
-      <button type="submit" class="result">=</button>
-    </div>
     </div>
   </form>
 </template>
