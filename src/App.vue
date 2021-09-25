@@ -18,7 +18,7 @@
 
     --primary: hsl(52, 100%, 62%);
     --secondary: hsl(198, 20%, 13%);
-    --tertiary: hsl(0, 0, 100%);
+    --tertiary: hsl(0, 0%, 100%);
 
     --button-background: hsl(268, 47%, 21%);
     --button-shadow: hsl(290, 70%, 36%);
