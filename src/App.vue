@@ -84,4 +84,8 @@
     font-size: 3rem;
     color: var(--primary);
   }
+
+  button {
+    cursor: pointer;
+  }
 </style>
