@@ -6,7 +6,7 @@
   const isEmptyExpression = computed(() => expression.value.length === 0);
 
   const expressionSymbols = ['+', '-', 'x', '/', ','];
-  type ExpressionSymbols = 'x';
+  type ExpressionSymbols = 'x' | '/';
 
   function clearExpression() {
     expression.value = '';
@@ -54,13 +54,14 @@
   }
 
   function getOperationBySymbol(symbol: ExpressionSymbols) {
-    const multi = (a: number, b: number) => a * b;
+    type MathOperation = (a: number, b: number) => number;
 
-    const mathOperationBySymbol: Record<
-      ExpressionSymbols,
-      (a: number, b: number) => number
-    > = {
+    const multi: MathOperation = (a, b) => a * b;
+    const divide: MathOperation = (a, b) => a / b;
+
+    const mathOperationBySymbol: Record<ExpressionSymbols, MathOperation> = {
       x: multi,
+      '/': divide,
     };
 
     return mathOperationBySymbol[symbol];
@@ -116,10 +117,13 @@
             9
           </button>
           <button class="button" @click="addExpressionValue('6')">6</button>
-          <button class="button" @click="addExpressionValue('3')">3</button>
+          <button type="button" class="button" @click="addExpressionValue('3')">
+            3
+          </button>
           <button
             class="button"
             :disabled="isEmptyExpression"
+            type="button"
             @click="addExpressionValue('/')"
           >
             /
