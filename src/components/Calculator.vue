@@ -6,7 +6,6 @@
   const isEmptyExpression = computed(() => expression.value.length === 0);
 
   const expressionSymbols = ['+', '-', 'x', '/', ','];
-  type ExpressionSymbols = 'x' | '/' | '+' | '-';
 
   function clearExpression() {
     expression.value = '';
@@ -53,7 +52,9 @@
     appendValueIntoExpression(event.key);
   }
 
-  function getOperationBySymbol(symbol: ExpressionSymbols) {
+  type MathExpressionSymbols = 'x' | '/' | '+' | '-';
+
+  function getOperationBySymbol(symbol: MathExpressionSymbols) {
     type MathOperation = (a: number, b: number) => number;
 
     const multi: MathOperation = (a, b) => a * b;
@@ -61,12 +62,13 @@
     const sum: MathOperation = (a, b) => a + b;
     const subtract: MathOperation = (a, b) => a - b;
 
-    const mathOperationBySymbol: Record<ExpressionSymbols, MathOperation> = {
-      x: multi,
-      '/': divide,
-      '+': sum,
-      '-': subtract,
-    };
+    const mathOperationBySymbol: Record<MathExpressionSymbols, MathOperation> =
+      {
+        x: multi,
+        '/': divide,
+        '+': sum,
+        '-': subtract,
+      };
 
     return mathOperationBySymbol[symbol];
   }
@@ -81,11 +83,11 @@
     );
 
     const mathOperate = getOperationBySymbol(
-      foundFirstSymbol as ExpressionSymbols,
+      foundFirstSymbol as MathExpressionSymbols,
     );
 
     const [firstNumber, secondNumber] = satinizedExpression.split(
-      foundFirstSymbol as ExpressionSymbols,
+      foundFirstSymbol as MathExpressionSymbols,
     );
 
     const result = mathOperate(Number(firstNumber), Number(secondNumber));
