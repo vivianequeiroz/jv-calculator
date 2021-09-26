@@ -78,8 +78,8 @@
       .replace(/,/, '.')
       .replace(/,/, '');
 
-    const foundFirstSymbol = Array.from(satinizedExpression).find((symbol) =>
-      expressionSymbols.includes(symbol),
+    const foundFirstSymbol = Array.from(satinizedExpression).find(
+      (symbol, index) => expressionSymbols.includes(symbol) && index !== 0,
     );
 
     const mathOperate = getOperationBySymbol(
