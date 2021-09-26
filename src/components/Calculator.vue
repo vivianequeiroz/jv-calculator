@@ -66,13 +66,7 @@
           <button class="button" @click="addExpressionValue('7')">7</button>
           <button class="button" @click="addExpressionValue('4')">4</button>
           <button class="button" @click="addExpressionValue('1')">1</button>
-          <button
-            class="button"
-            :disabled="isEmptyExpression"
-            @click="addExpressionValue(',')"
-          >
-            ,
-          </button>
+          <button class="button" @click="addExpressionValue(',')">,</button>
         </div>
         <div class="button-column">
           <button class="button" @click="addExpressionValue('8')">8</button>
@@ -96,20 +90,8 @@
           <button class="button del" @click="removeLastCharFromExpression">
             DEL
           </button>
-          <button
-            class="button"
-            :disabled="isEmptyExpression"
-            @click="addExpressionValue('+')"
-          >
-            +
-          </button>
-          <button
-            class="button"
-            :disabled="isEmptyExpression"
-            @click="addExpressionValue('-')"
-          >
-            -
-          </button>
+          <button class="button" @click="addExpressionValue('+')">+</button>
+          <button class="button" @click="addExpressionValue('-')">-</button>
           <button
             class="button"
             :disabled="isEmptyExpression"
