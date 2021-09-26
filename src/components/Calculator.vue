@@ -13,12 +13,8 @@
     expression.value = Array.from(expression.value).slice(0, -1).join('');
   }
 
-  function addExpressionValue(buttonValue: string) {
-    expression.value += buttonValue;
-  }
-
-  function handleInput(event: KeyboardEvent) {
-    const candidateText = event.key;
+  function appendValueIntoExpression(value: string) {
+    const candidateText = value;
 
     const expressionSymbols = ['+', '-', 'x', '/', ','];
     const lastValue = expression.value.slice(-1);
@@ -45,6 +41,14 @@
       expression.value += candidateText;
       return;
     }
+  }
+
+  function addExpressionValue(buttonValue: string) {
+    appendValueIntoExpression(buttonValue);
+  }
+
+  function handleInput(event: KeyboardEvent) {
+    appendValueIntoExpression(event.key);
   }
 </script>
 
