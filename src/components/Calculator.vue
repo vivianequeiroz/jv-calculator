@@ -18,12 +18,30 @@
   function addExpressionValue(buttonValue: string) {
     expression.value += buttonValue;
   }
+
+  // function teste(evento: Event) {
+  //   evento.preventDefault();
+  //   console.log(evento.data);
+
+  //   const validExpressionPattern = /([0-9,?]+|-|\+|x|\/)/g;
+  //   const candidateText = evento.data;
+  //   const isValidExpression = validExpressionPattern.test(candidateText);
+  //   console.log(isValidExpression);
+
+  //   if(isValidExpression || expression.value.length > 0) {
+  //     expression.value += candidateText;
+  //     return;
+  //   } else {
+  //     expression.value = '';
+  //   }
+  //   return;
+  // }
 </script>
 
 <template>
   <pre style="color: #fff">{{ expression }}</pre>
   <form class="calculator-container" @submit.prevent="">
-    <input v-model="expression" class="input-numbers" />
+    <div class="input-numbers">{{ expression }}</div>
     <div class="buttons">
       <div class="buttons-operators">
         <div class="button-column">
