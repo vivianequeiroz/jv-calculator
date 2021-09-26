@@ -36,10 +36,6 @@
     box-sizing: border-box;
   }
 
-  html {
-    font-size: 62.5%;
-  }
-
   @media (max-width: 1080px) {
     html {
       font-size: 93.75%;
@@ -69,6 +65,7 @@
 
   .container {
     max-width: 1440px;
+    width: 100%;
     height: 100vh;
 
     margin: 0 auto;
@@ -76,11 +73,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
     padding: 2rem;
   }
 
   .title {
+    text-align: center;
     font-size: 3rem;
     color: var(--primary);
   }
