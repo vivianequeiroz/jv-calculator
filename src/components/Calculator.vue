@@ -20,8 +20,15 @@
   function handleInput(event: KeyboardEvent) {
     const candidateText = event.key;
 
+    const expressionSymbols = ['+', '-', 'x', '/', ','];
+    const lastValue = expression.value.slice(-1);
+    const isCandidateRepeatSymbol =
+      expressionSymbols.includes(lastValue) &&
+      expressionSymbols.includes(candidateText);
+
     const validExpressionPattern = /^(((\d+)|-|\+|x|\/|(?:x)|(,))+)$/g;
-    const isValidExpression = validExpressionPattern.test(candidateText);
+    const isValidExpression =
+      validExpressionPattern.test(candidateText) && !isCandidateRepeatSymbol;
 
     const invalidSymbolsAsFirstValue = ['x', '/'];
     const isValidFirstValue =
@@ -39,9 +46,6 @@
       return;
     }
   }
-
-  //TODO:
-  // se já existe simbolo, nao aceitar outro em seguida
 </script>
 
 <template>
