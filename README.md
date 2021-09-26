@@ -20,9 +20,10 @@ Inicialmente esse projeto surgiu com o intuito de contribuir para a performance 
 - Desenvolvimento
   - [Discord - Screen share](https://discord.com/)
 - Design
-  - Front Mentor
+  - [Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
 - Tecnologias
-  - VUE
+  - [Vue.js](https://v3.vuejs.org/)
+  - [Vite](https://vitejs.dev/guide/)
 
 <br>
 <h2> 🛠️ Como rodar </h2>
@@ -30,7 +31,8 @@ Para acessar a versão de produção, acesse o link abaixo:
  link.com
 
 Para fazer setup local,
-
+- clonar repo
+- yarn install / npm i
 <br>
 <h2> 🌱 🌳 Gostaria de contribuir? </h2>
 
