@@ -18,32 +18,53 @@
   }
 
   function handleInput(event: KeyboardEvent) {
-    const validExpressionPattern = /^(((\d+)|-|\+|x|\/|(?:x)|(,))+)$/g;
     const candidateText = event.key;
-    const invalidSymbolsAsFirstValue = ['x', '/'];
+
+    const validExpressionPattern = /^(((\d+)|-|\+|x|\/|(?:x)|(,))+)$/g;
     const isValidExpression = validExpressionPattern.test(candidateText);
+
+    const invalidSymbolsAsFirstValue = ['x', '/'];
+    const isValidFirstValue =
+      isValidExpression && !invalidSymbolsAsFirstValue.includes(candidateText);
+
+    if (isEmptyExpression.value) {
+      if (isValidFirstValue) {
+        expression.value += candidateText;
+      }
+      return;
+    }
 
     if (isValidExpression) {
       expression.value += candidateText;
+      return;
     }
   }
 
-  //TODO: se vazio, apenas aceitar numeros
+  //TODO:
   // se já existe simbolo, nao aceitar outro em seguida
-
 </script>
 
 <template>
   <pre style="color: #fff">{{ expression }}</pre>
   <form class="calculator-container" @submit.prevent="">
-    <input class="input-numbers" :value="expression" @keydown.prevent="handleInput" />
+    <input
+      class="input-numbers"
+      :value="expression"
+      @keydown.prevent="handleInput"
+    />
     <div class="buttons">
       <div class="buttons-operators">
         <div class="button-column">
           <button class="button" @click="addExpressionValue('7')">7</button>
           <button class="button" @click="addExpressionValue('4')">4</button>
           <button class="button" @click="addExpressionValue('1')">1</button>
-          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue(',')">,</button>
+          <button
+            class="button"
+            :disabled="isEmptyExpression"
+            @click="addExpressionValue(',')"
+          >
+            ,
+          </button>
         </div>
         <div class="button-column">
           <button class="button" @click="addExpressionValue('8')">8</button>
@@ -55,13 +76,39 @@
           <button class="button" @click="addExpressionValue('9')">9</button>
           <button class="button" @click="addExpressionValue('6')">6</button>
           <button class="button" @click="addExpressionValue('3')">3</button>
-          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('/')">/</button>
+          <button
+            class="button"
+            :disabled="isEmptyExpression"
+            @click="addExpressionValue('/')"
+          >
+            /
+          </button>
         </div>
         <div class="button-column">
-          <button class="button del" @click="removeLastCharFromExpression">DEL</button>
-          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('+')">+</button>
-          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('-')">-</button>
-          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('x')">x</button>
+          <button class="button del" @click="removeLastCharFromExpression">
+            DEL
+          </button>
+          <button
+            class="button"
+            :disabled="isEmptyExpression"
+            @click="addExpressionValue('+')"
+          >
+            +
+          </button>
+          <button
+            class="button"
+            :disabled="isEmptyExpression"
+            @click="addExpressionValue('-')"
+          >
+            -
+          </button>
+          <button
+            class="button"
+            :disabled="isEmptyExpression"
+            @click="addExpressionValue('x')"
+          >
+            x
+          </button>
         </div>
       </div>
       <div class="button-controllers">
