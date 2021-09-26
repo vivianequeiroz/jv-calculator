@@ -20,12 +20,17 @@
   function handleInput(event: KeyboardEvent) {
     const validExpressionPattern = /^(((\d+)|-|\+|x|\/|(?:x)|(,))+)$/g;
     const candidateText = event.key;
+    const invalidSymbolsAsFirstValue = ['x', '/'];
     const isValidExpression = validExpressionPattern.test(candidateText);
 
     if (isValidExpression) {
       expression.value += candidateText;
     }
   }
+
+  //TODO: se vazio, apenas aceitar numeros
+  // se já existe simbolo, nao aceitar outro em seguida
+
 </script>
 
 <template>
