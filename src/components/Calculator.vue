@@ -1,15 +1,17 @@
 <script setup lang="ts">
-  import { ref } from 'vue';
+  import { ref, computed } from 'vue';
 
-  const expression = ref<string>('0');
+  const expression = ref<string>('');
+
+  const isEmptyExpression = computed(() => expression.value.length === 0);
 
   // /([0-9\.?]+|-|\+|x|\/)/g
 
   function clearExpression() {
-    expression.value = '';
+    expression.value = '0';
   }
 
-  function removeLastChar() {
+  function removeLastCharFromExpression() {
     expression.value = Array.from(expression.value).slice(0, -1).join('');
   }
 
@@ -28,7 +30,7 @@
           <button class="button" @click="addExpressionValue('7')">7</button>
           <button class="button" @click="addExpressionValue('4')">4</button>
           <button class="button" @click="addExpressionValue('1')">1</button>
-          <button class="button" @click="addExpressionValue(',')">,</button>
+          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue(',')">,</button>
         </div>
         <div class="button-column">
           <button class="button" @click="addExpressionValue('8')">8</button>
@@ -40,13 +42,13 @@
           <button class="button" @click="addExpressionValue('9')">9</button>
           <button class="button" @click="addExpressionValue('6')">6</button>
           <button class="button" @click="addExpressionValue('3')">3</button>
-          <button class="button" @click="addExpressionValue('/')">/</button>
+          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('/')">/</button>
         </div>
         <div class="button-column">
-          <button class="button del" @click="removeLastChar">DEL</button>
-          <button class="button" @click="addExpressionValue('+')">+</button>
-          <button class="button" @click="addExpressionValue('-')">-</button>
-          <button class="button" @click="addExpressionValue('x')">x</button>
+          <button class="button del" @click="removeLastCharFromExpression">DEL</button>
+          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('+')">+</button>
+          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('-')">-</button>
+          <button class="button" :disabled="isEmptyExpression" @click="addExpressionValue('x')">x</button>
         </div>
       </div>
       <div class="button-controllers">
