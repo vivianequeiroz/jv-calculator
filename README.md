@@ -7,6 +7,8 @@
 <h2> 🏛️ Proposta do site </h2>
 <a target="_blank" href="https://link.com">JV Calculator</a> é uma aplicação responsiva feita para que você possa calcular operações matemáticas nas quais você ainda não sabe como fazer.
 <br>
+Ela foi desenvolvidas pelos alunos do IFSP <strong>João Vitor Silva Bispo</strong> e <strong>Viviane de Santana Queiroz</strong>.
+<br>
 <h2> 🎯 Motivação do projeto </h2>
 Inicialmente esse projeto surgiu com o intuito de contribuir para a performance acadêmica dos mantenedores.
 
@@ -19,20 +21,29 @@ Inicialmente esse projeto surgiu com o intuito de contribuir para a performance 
   - [Github Issues](https://github.com/Viviane-Queiroz/jv-calculator/issues/1)
 - Desenvolvimento
   - [Discord - Screen share](https://discord.com/)
+  - [VSCode (usada por ambos)](https://code.visualstudio.com/)
 - Design
   - [Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
 - Tecnologias
   - [Vue.js](https://v3.vuejs.org/)
   - [Vite](https://vitejs.dev/guide/)
+  - [Typescript](https://www.typescriptlang.org/)
 
 <br>
 <h2> 🛠️ Como rodar </h2>
 Para acessar a versão de produção, acesse o link abaixo:
  link.com
 
-Para fazer setup local,
-- clonar repo
-- yarn install / npm i
+Para fazer setup local:
+
+    1. Instale Node.js LTS (>12.x v)
+    2. Instale o Yarn (^1.22 v)
+    3. Faça um fork do repositório
+    4. Instale as dependências com o comando:
+       $ yarn install
+    5. Execute o software com o comando:
+       $ yarn dev
+
 <br>
 <h2> 🌱 🌳 Gostaria de contribuir? </h2>
 
@@ -47,5 +58,5 @@ Para fazer setup local,
 
 <br><br>
 
-<p align="center">Feito com 💛  por <a target="_blank" href="https://www.linkedin.com/in/viviane-de-santana-queiroz-1a5a4b155/
-">Viviane Queiroz</a> 👩‍💻 ✨
+<p align="center">Feito com 💛  &nbsp; por <a target="_blank" href="https://www.linkedin.com/in/viviane-de-santana-queiroz-1a5a4b155/
+">Viviane Queiroz</a> 👩‍💻 ✨ &nbsp e <a target="_blank" href="https://www.linkedin.com/in/joaobispo2077">João Bispo</a> &nbsp🌎 ⚡
