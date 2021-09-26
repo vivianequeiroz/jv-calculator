@@ -248,6 +248,13 @@
     border: 0;
     border-radius: 0.5rem;
     border-bottom: 0.3rem solid var(--action-button-background);
+
+    transition: border-bottom 150ms ease-in-out, filter 300ms ease-in;
+  }
+
+  .button:hover {
+    border-bottom: 0 solid var(--action-button-background);
+    filter: brightness(90%);
   }
 
   .button-controllers {
@@ -268,6 +275,8 @@
 
     border: 0;
     border-radius: 0.5rem;
+
+    transition: border-bottom 150ms ease-in-out;
   }
 
   .reset,
@@ -276,10 +285,22 @@
     background: var(--action-button-background);
     border-bottom: 0.3rem solid var(--action-button-shadow);
   }
+  .reset:hover,
+  .del:hover {
+    border-bottom: 0 solid var(--action-button-shadow);
+    filter: brightness(90%);
+  }
 
   .result {
     background: var(--submit-button);
     border-bottom: 0.3rem solid var(--soft-submit-button);
+
+    transition: border-bottom 150ms ease-in-out, filter 300ms ease-in;
+  }
+
+  .result:hover {
+    border-bottom: 0 solid var(--soft-submit-button);
+    filter: brightness(90%);
   }
 
   @media (max-width: 600px) {
