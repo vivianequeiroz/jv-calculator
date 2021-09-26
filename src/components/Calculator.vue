@@ -5,6 +5,9 @@
 
   const isEmptyExpression = computed(() => expression.value.length === 0);
 
+  const expressionSymbols = ['+', '-', 'x', '/', ','];
+  type ExpressionSymbols = 'x';
+
   function clearExpression() {
     expression.value = '';
   }
@@ -16,7 +19,6 @@
   function appendValueIntoExpression(value: string) {
     const candidateText = value;
 
-    const expressionSymbols = ['+', '-', 'x', '/', ','];
     const lastValue = expression.value.slice(-1);
     const isCandidateRepeatSymbol =
       expressionSymbols.includes(lastValue) &&
@@ -50,11 +52,46 @@
   function handleInput(event: KeyboardEvent) {
     appendValueIntoExpression(event.key);
   }
+
+  function getOperationBySymbol(symbol: ExpressionSymbols) {
+    const multi = (a: number, b: number) => a * b;
+
+    const mathOperationBySymbol: Record<
+      ExpressionSymbols,
+      (a: number, b: number) => number
+    > = {
+      x: multi,
+    };
+
+    return mathOperationBySymbol[symbol];
+  }
+
+  function calculate() {
+    const satinizedExpression = expression.value
+      .replace(/,/, '.')
+      .replace(/,/, '');
+
+    const foundFirstSymbol = Array.from(satinizedExpression).find((symbol) =>
+      expressionSymbols.includes(symbol),
+    );
+
+    const mathOperate = getOperationBySymbol(
+      foundFirstSymbol as ExpressionSymbols,
+    );
+
+    const [firstNumber, secondNumber] = satinizedExpression.split(
+      foundFirstSymbol as ExpressionSymbols,
+    );
+
+    const result = mathOperate(Number(firstNumber), Number(secondNumber));
+
+    expression.value = result.toString();
+  }
 </script>
 
 <template>
   <pre style="color: #fff">{{ expression }}</pre>
-  <form class="calculator-container" @submit.prevent="">
+  <form class="calculator-container" @submit.prevent="calculate">
     <input
       class="input-numbers"
       :value="expression"
@@ -75,7 +112,9 @@
           <button class="button" @click="addExpressionValue('0')">0</button>
         </div>
         <div class="button-column">
-          <button class="button" @click="addExpressionValue('9')">9</button>
+          <button type="button" class="button" @click="addExpressionValue('9')">
+            9
+          </button>
           <button class="button" @click="addExpressionValue('6')">6</button>
           <button class="button" @click="addExpressionValue('3')">3</button>
           <button
@@ -95,6 +134,7 @@
           <button
             class="button"
             :disabled="isEmptyExpression"
+            type="button"
             @click="addExpressionValue('x')"
           >
             x
