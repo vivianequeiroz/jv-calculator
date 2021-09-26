@@ -65,7 +65,7 @@
       x: multi,
       '/': divide,
       '+': sum,
-      '-': subtract
+      '-': subtract,
     };
 
     return mathOperationBySymbol[symbol];
@@ -105,22 +105,40 @@
     <div class="buttons">
       <div class="buttons-operators">
         <div class="button-column">
-          <button class="button" @click="addExpressionValue('7')">7</button>
-          <button class="button" @click="addExpressionValue('4')">4</button>
-          <button class="button" @click="addExpressionValue('1')">1</button>
-          <button class="button" @click="addExpressionValue(',')">,</button>
+          <button type="button" class="button" @click="addExpressionValue('7')">
+            7
+          </button>
+          <button type="button" class="button" @click="addExpressionValue('4')">
+            4
+          </button>
+          <button type="button" class="button" @click="addExpressionValue('1')">
+            1
+          </button>
+          <button type="button" class="button" @click="addExpressionValue(',')">
+            ,
+          </button>
         </div>
         <div class="button-column">
-          <button class="button" @click="addExpressionValue('8')">8</button>
-          <button class="button" @click="addExpressionValue('5')">5</button>
-          <button class="button" @click="addExpressionValue('2')">2</button>
-          <button class="button" @click="addExpressionValue('0')">0</button>
+          <button type="button" class="button" @click="addExpressionValue('8')">
+            8
+          </button>
+          <button type="button" class="button" @click="addExpressionValue('5')">
+            5
+          </button>
+          <button type="button" class="button" @click="addExpressionValue('2')">
+            2
+          </button>
+          <button type="button" class="button" @click="addExpressionValue('0')">
+            0
+          </button>
         </div>
         <div class="button-column">
           <button type="button" class="button" @click="addExpressionValue('9')">
             9
           </button>
-          <button class="button" @click="addExpressionValue('6')">6</button>
+          <button type="button" class="button" @click="addExpressionValue('6')">
+            6
+          </button>
           <button type="button" class="button" @click="addExpressionValue('3')">
             3
           </button>
@@ -137,8 +155,12 @@
           <button class="button del" @click="removeLastCharFromExpression">
             DEL
           </button>
-          <button class="button" type="button" @click="addExpressionValue('+')">+</button>
-          <button class="button" type="button" @click="addExpressionValue('-')">-</button>
+          <button class="button" type="button" @click="addExpressionValue('+')">
+            +
+          </button>
+          <button class="button" type="button" @click="addExpressionValue('-')">
+            -
+          </button>
           <button
             class="button"
             :disabled="isEmptyExpression"
@@ -150,7 +172,9 @@
         </div>
       </div>
       <div class="button-controllers">
-        <button class="reset" @click="clearExpression">RESET</button>
+        <button type="button" class="reset" @click="clearExpression">
+          RESET
+        </button>
         <button type="submit" class="result">=</button>
       </div>
     </div>
