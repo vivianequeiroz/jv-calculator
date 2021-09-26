@@ -38,6 +38,16 @@
       return;
     }
 
+    // dont touch this, idk why it works
+    const hasTwoFactors =
+      Array.from(expression.value).find(
+        (symbol, index) => expressionSymbols.includes(symbol) && index !== 0,
+      ) && expressionSymbols.includes(candidateText);
+
+    if (hasTwoFactors) {
+      return;
+    }
+
     if (isValidExpression) {
       expression.value += candidateText;
       return;
