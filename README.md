@@ -1,11 +1,49 @@
-# Vue 3 + Typescript + Vite
+<meta charset="utf-8">
+<h1 align="center">
+    <img alt="JV Calculator" title="#jv-calculator" src="./public/favicon.svg" width="200px" />
+</h1>
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<br>
+<h2> 🏛️ Proposta do site </h2>
+<a target="_blank" href="https://link.com">JV Calculator</a> é uma aplicação responsiva feita para que você possa calcular operações matemáticas nas quais você ainda não sabe como fazer.
+<br>
+<h2> 🎯 Motivação do projeto </h2>
+Inicialmente esse projeto surgiu com o intuito de contribuir para a performance acadêmica dos mantenedores.
 
-## Recommended IDE Setup
+<br>
+<h2> ⚙️ Ferramentas utilizadas </h2>
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- Organização
+  - [Discord - Comunicação](https://discord.com/)
+  - [Github Projects - Kanban](https://github.com/Viviane-Queiroz/jv-calculator/projects/1)
+  - [Github Issues](https://github.com/Viviane-Queiroz/jv-calculator/issues/1)
+- Desenvolvimento
+  - [Discord - Screen share](https://discord.com/)
+- Design
+  - Front Mentor
+- Tecnologias
+  - VUE
 
-## Type Support For `.vue` Imports in TS
+<br>
+<h2> 🛠️ Como rodar </h2>
+Para acessar a versão de produção, acesse o link abaixo:
+ link.com
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+Para fazer setup local,
+
+<br>
+<h2> 🌱 🌳 Gostaria de contribuir? </h2>
+
+    1. Realize um Fork do projeto
+    2. Crie um branch com a nova feature:
+       $ git checkout -b sua-feature
+    3. Realize o commit:
+       $ git commit -m 'feat: sua feature'
+    4. Realize o Push no Branch
+       $ git push origin sua-feature
+    5. Abra um Pull Request
+
+<br><br>
+
+<p align="center">Feito com 💛  por <a target="_blank" href="https://www.linkedin.com/in/viviane-de-santana-queiroz-1a5a4b155/
+">Viviane Queiroz</a> 👩‍💻 ✨
