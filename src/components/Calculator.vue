@@ -19,29 +19,21 @@
     expression.value += buttonValue;
   }
 
-  // function teste(evento: Event) {
-  //   evento.preventDefault();
-  //   console.log(evento.data);
+  function handleInput(event: KeyboardEvent) {
+    const validExpressionPattern = /^(((\d+)|-|\+|x|\/|(?:x)|(,))+)$/g;
+    const candidateText = event.key;
+    const isValidExpression = validExpressionPattern.test(candidateText);
 
-  //   const validExpressionPattern = /([0-9,?]+|-|\+|x|\/)/g;
-  //   const candidateText = evento.data;
-  //   const isValidExpression = validExpressionPattern.test(candidateText);
-  //   console.log(isValidExpression);
-
-  //   if(isValidExpression || expression.value.length > 0) {
-  //     expression.value += candidateText;
-  //     return;
-  //   } else {
-  //     expression.value = '';
-  //   }
-  //   return;
-  // }
+    if (isValidExpression) {
+      expression.value += candidateText;
+    }
+  }
 </script>
 
 <template>
   <pre style="color: #fff">{{ expression }}</pre>
   <form class="calculator-container" @submit.prevent="">
-    <div class="input-numbers">{{ expression }}</div>
+    <input class="input-numbers" :value="expression" @keydown.prevent="handleInput" />
     <div class="buttons">
       <div class="buttons-operators">
         <div class="button-column">
