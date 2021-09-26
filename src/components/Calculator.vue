@@ -5,10 +5,8 @@
 
   const isEmptyExpression = computed(() => expression.value.length === 0);
 
-  // /([0-9\.?]+|-|\+|x|\/)/g
-
   function clearExpression() {
-    expression.value = '0';
+    expression.value = '';
   }
 
   function removeLastCharFromExpression() {
