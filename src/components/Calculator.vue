@@ -107,7 +107,6 @@
 </script>
 
 <template>
-  <pre style="color: #fff">{{ expression }}</pre>
   <form class="calculator-container" @submit.prevent="calculate">
     <input
       class="input-numbers"
