@@ -5,7 +5,7 @@
 
 <br>
 <h2> 🏛️ Proposta do site </h2>
-<a target="_blank" href="https://link.com">JV Calculator</a> é uma aplicação responsiva feita para que você possa calcular operações matemáticas nas quais você ainda não sabe como fazer.
+<a target="_blank" href="https://viviane-queiroz.github.io/jv-calculator/">JV Calculator</a> é uma aplicação responsiva feita para que você possa calcular operações matemáticas nas quais você ainda não sabe como fazer.
 <br>
 Ela foi desenvolvidas pelos alunos do IFSP <strong>João Vitor Silva Bispo</strong> e <strong>Viviane de Santana Queiroz</strong>.
 <br>
@@ -31,9 +31,8 @@ Inicialmente esse projeto surgiu com o intuito de contribuir para a performance 
 
 <br>
 <h2> 🛠️ Como rodar </h2>
-Para acessar a versão de produção, acesse o link abaixo:
- link.com
-
+Para acessar a versão de produção, acesse o seguinte <a target="_blank" href="https://viviane-queiroz.github.io/jv-calculator/">link</a>.
+</br>
 Para fazer setup local:
 
     1. Instale Node.js LTS (>12.x v)
